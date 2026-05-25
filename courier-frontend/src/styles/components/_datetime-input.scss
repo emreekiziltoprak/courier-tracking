@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+
+.ct-datetime-input {
+  width: 100%;
+  padding: 6px 10px;
+  background: $color-fg-2;
+  color: $color-text-1;
+  border: $divider-width solid $color-border-1;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+
+  &:focus {
+    border-color: $color-brand;
+    box-shadow: 0 0 0 1px $color-brand;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(0.6);
+    cursor: pointer;
+  }
+}

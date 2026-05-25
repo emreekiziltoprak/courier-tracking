@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.courier-table {
+  @include flex-column;
+  height: 100%;
+  overflow: hidden;
+
+  &__search {
+    padding: 8px 10px;
+    @include panel-border-bottom;
+    background: $color-fg-2;
+    flex-shrink: 0;
+  }
+
+  &__grid {
+    flex: 1 1 0;
+    overflow: hidden;
+  }
+
+  &__footer {
+    padding: 5px 12px;
+    @include panel-border-top;
+    font-size: $font-size-sm;
+    color: $color-text-3;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  &__loader {
+    @include flex-center;
+    height: 100%;
+  }
+}
+
+.courier-name-cell {
+  @include flex-column;
+  justify-content: center;
+  height: 100%;
+  gap: 2px;
+
+  &__name {
+    font-weight: 600;
+    color: $color-text-1;
+    font-size: $font-size-base;
+  }
+
+  &__id {
+    @include text-mono($font-size-xs);
+    color: $color-text-3;
+  }
+}
+
+.courier-location-cell {
+  @include text-mono;
+}
+
+.courier-updated-cell {
+  @include text-mono;
+}
+
+.cell--muted {
+  @include text-muted;
+}

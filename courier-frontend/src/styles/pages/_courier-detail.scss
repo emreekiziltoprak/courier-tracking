@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.courier-detail {
+  @include flex-column;
+  height: 100%;
+  overflow: hidden;
+
+  &__header {
+    padding: 12px 16px;
+    @include panel-border-bottom;
+    background: $color-fg-2;
+    @include flex-row(12);
+    flex-shrink: 0;
+  }
+
+  &__name {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    color: $color-text-1;
+  }
+
+  &__id {
+    @include text-mono($font-size-xs);
+    color: $color-text-3;
+  }
+
+  &__body {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  &__map-wrapper {
+    margin: 0 14px 14px;
+    border-radius: $radius-xl;
+    overflow: hidden;
+    border: $divider-width solid $color-border-1;
+  }
+
+  &__entries-header {
+    padding: 6px 14px;
+    @include panel-border-top;
+    @include text-label;
+    background: $color-fg-2;
+  }
+
+  &__empty {
+    @include flex-center;
+    height: 100%;
+  }
+
+  &__loader {
+    @include flex-center;
+    height: 100%;
+  }
+}

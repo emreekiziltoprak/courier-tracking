@@ -1,0 +1,96 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.app-shell {
+  @include flex-column;
+  height: 100vh;
+  overflow: hidden;
+  background: $color-bg;
+}
+
+.nav {
+  @include flex-row;
+  justify-content: space-between;
+  background: $color-fg-2;
+  @include panel-border-bottom;
+  padding: 0 16px;
+  min-height: $nav-height;
+  height: $nav-height;
+  flex-shrink: 0;
+
+  &__left {
+    @include flex-row;
+    height: $nav-height;
+  }
+
+  &__right {
+    @include flex-row(12);
+    height: $nav-height;
+  }
+
+  &__brand {
+    @include flex-row(8);
+    margin-right: 20px;
+  }
+
+  &__logo {
+    @include flex-center;
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-lg;
+    background: linear-gradient(135deg, $color-brand 0%, $color-brand-press 100%);
+    font-size: $font-size-lg;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: $font-size-lg;
+    color: $color-text-1;
+    letter-spacing: 0.2px;
+  }
+
+  &__divider {
+    @include divider-vertical;
+    margin: 0 8px;
+
+    &--sm {
+      margin: 0 4px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+.nav-counters {
+  @include flex-row(16);
+
+  &__item {
+    text-align: center;
+  }
+
+  &__value {
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    line-height: 1;
+
+    &--warning {
+      color: $color-warning;
+    }
+
+    &--brand {
+      color: $color-brand;
+    }
+  }
+
+  &__label {
+    @include text-label;
+    letter-spacing: 0.4px;
+  }
+}
+
+.main-content {
+  flex: 1;
+  overflow: hidden;
+}

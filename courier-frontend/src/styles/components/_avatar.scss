@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.avatar {
+  @include flex-center;
+  border-radius: $radius-round;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+
+  &--lg {
+    width: 38px;
+    height: 38px;
+    font-size: $font-size-2xl;
+    background: linear-gradient(135deg, $color-warning, var(--calcite-color-status-warning-press));
+  }
+}

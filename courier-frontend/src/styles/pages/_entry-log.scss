@@ -1,0 +1,16 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.entry-log {
+  @include full-size;
+}
+
+.entry-log-time-cell {
+  @include text-mono;
+}
+
+.entry-log-courier-cell {
+  font-size: $font-size-md;
+  font-weight: 500;
+  color: $color-text-1;
+}

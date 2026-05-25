@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as *;
+
+.ol-viewport {
+  height: 100% !important;
+}
+
+.ol-zoom {
+  bottom: 12px !important;
+  top: auto !important;
+  right: 12px !important;
+  left: auto !important;
+}
+
+.ol-zoom button {
+  background: $color-fg-2 !important;
+  color: $color-text-1 !important;
+  border: $divider-width solid $color-border-1 !important;
+  width: 28px !important;
+  height: 28px !important;
+  font-size: $font-size-2xl !important;
+  border-radius: $radius-md !important;
+  margin-bottom: 2px !important;
+}
+
+.ol-zoom button:hover {
+  background: $color-fg-3 !important;
+}
+
+.ol-attribution {
+  font-size: $font-size-xs !important;
+  background: rgba(28, 33, 39, 0.8) !important;
+  color: $color-text-3 !important;
+}
+
+.ol-attribution a {
+  color: $color-brand !important;
+}
+
+.ct-row-selected {
+  background: $color-surface-highlight !important;
+  border-left: 3px solid $color-brand !important;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.mini-map {
+  width: 100%;
+  height: 300px;
+}

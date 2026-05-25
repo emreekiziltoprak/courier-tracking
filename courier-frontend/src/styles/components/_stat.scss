@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.stat {
+  @include card-base;
+
+  &__label {
+    @include text-label;
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    font-size: $font-size-base;
+    font-weight: 600;
+    color: $color-text-1;
+
+    &--mono {
+      font-family: $font-family-mono;
+    }
+
+    &--accent {
+      font-family: inherit;
+    }
+  }
+}

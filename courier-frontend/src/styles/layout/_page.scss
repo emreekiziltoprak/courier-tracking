@@ -1,0 +1,6 @@
+@use "../abstracts/mixins" as *;
+
+.page {
+  position: relative;
+  @include full-size;
+}

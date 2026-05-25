@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.dashboard-filters {
+  padding: 16px;
+  @include flex-column;
+  height: 100%;
+  overflow-y: auto;
+
+  &__header {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: $font-size-md;
+    font-weight: 600;
+    color: $color-text-2;
+  }
+
+  &__field {
+    margin-bottom: 12px;
+  }
+
+  &__field--lg {
+    margin-bottom: 16px;
+  }
+
+  &__divider {
+    height: $divider-width;
+    background: $color-border-1;
+    margin: 0 0 12px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.badge {
+  font-weight: 600;
+  font-size: $font-size-sm;
+  border-radius: $radius-sm;
+  padding: 2px 7px;
+  display: inline-block;
+  @include truncate;
+
+  &--brand {
+    color: $color-brand;
+    background: $brand-alpha-10;
+    border: $divider-width solid $brand-alpha-20;
+    cursor: pointer;
+    max-width: 140px;
+  }
+
+  &--warning {
+    color: $color-warning;
+    background: $warning-alpha-10;
+    border: $divider-width solid $warning-alpha-20;
+    max-width: 80px;
+  }
+
+  &--filter {
+    font-size: $font-size-xs;
+    font-weight: 700;
+    background: $brand-alpha-15;
+    color: $color-brand;
+    border: $divider-width solid $brand-alpha-30;
+    border-radius: 10px;
+    padding: 1px 7px;
+  }
+}

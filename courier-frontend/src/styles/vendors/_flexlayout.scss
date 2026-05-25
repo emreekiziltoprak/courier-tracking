@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+
+.flexlayout__layout {
+  height: 100%;
+  background: $color-bg !important;
+}
+
+.flexlayout__tabset {
+  background: $color-fg-1 !important;
+  border: $divider-width solid $color-border-1 !important;
+  border-radius: $radius-md;
+  overflow: hidden;
+}
+
+.flexlayout__tabset_header {
+  background: $color-fg-2 !important;
+  border-bottom: $divider-width solid $color-border-1 !important;
+  height: 34px !important;
+}
+
+.flexlayout__tab_button {
+  color: $color-text-2 !important;
+  font-size: $font-size-md !important;
+  font-weight: 500 !important;
+  padding: 0 14px !important;
+  border-right: $divider-width solid $color-border-1 !important;
+}
+
+.flexlayout__tab_button--selected {
+  color: $color-brand !important;
+  background: $color-fg-1 !important;
+  border-bottom: 2px solid $color-brand !important;
+}
+
+.flexlayout__tab_button:hover:not(.flexlayout__tab_button--selected) {
+  background: $color-fg-3 !important;
+  color: $color-text-1 !important;
+}
+
+.flexlayout__tab {
+  background: $color-fg-1 !important;
+  color: $color-text-1 !important;
+}
+
+.flexlayout__splitter {
+  background: $color-border-1 !important;
+}
+
+.flexlayout__splitter:hover {
+  background: $color-brand !important;
+}
